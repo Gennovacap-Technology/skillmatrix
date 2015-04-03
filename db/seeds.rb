@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+if(Manager.find_by_email("reza.piri@gennovacap.com").nil?)
+  puts "Create Manager"
+  Manager.create({email: 'reza.piri@gennovacap.com', password: 'Reza2thetop007', password_confirmation: 'Reza2thetop007'})
+end
