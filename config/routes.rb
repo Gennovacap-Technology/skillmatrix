@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :managers
   root :to =>  'home#index'
 
   namespace :managers do
     get '/index', action: 'index'
   end
+
+  devise_for :developers
+  devise_for :managers
 
 end
